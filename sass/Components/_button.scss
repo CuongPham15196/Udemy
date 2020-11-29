@@ -1,0 +1,27 @@
+.btn__red {
+    @include styleButton($color-red-0, $color-red-0, $pd-1, $pd-1 + 2);
+    @include styleText($fs-0, $color-white-0, $fw-bold-1);
+    letter-spacing: 1.2px;
+    transition: all 0.5s;
+    &:hover {
+        @include styleHoverButton($color-red-2, $color-red-2, $color-white-0);
+    }
+}
+
+.btn__white {
+    @include styleButton($color-white-0, $color-black-0, $pd-1, $pd-1 + 2);
+    @include styleText($fs-0, $color-gray-4, $fw-bold-1);
+    letter-spacing: 1.2px;
+    transition: all 0.5s;
+    &:hover {
+        @include styleHoverButton($color-white-0, $color-black-0, $color-black-0);
+    }
+}
+
+.btn__inPut {
+    @include styleText($fs-1, $color-red-0, $fw-normal);
+    @include styleButton($color-gray-5, $color-gray-5, $pd-1, $pd-1);
+    &:hover {
+        @include styleHoverButton($color-red-0, $color-red-0, $color-white-0);
+    }
+}

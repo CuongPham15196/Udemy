@@ -1,0 +1,55 @@
+.eduCarousel {
+    background-image: url(../img/cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    .eduCarousel__content {
+        width: 40%;
+        @include location(50%, 20%, -50%, -40%);
+        h2 {
+            @include styleText($fs-4, $color-white-0, $fw-bold);
+        }
+        p {
+            @include styleText($fs-2 - 2, $color-white-cream, $fw-normal);
+        }
+        .eduCarousel__form {
+            .form-control {
+                width: 83%;
+                z-index: 1;
+                @include styleInputSearch($color-white-0, $color-white-0, $pd-2, $pd-1);
+                &::placeholder {
+                    @include styleText($fs-2, $color-gray-2, $fw-normal);
+                }
+                &:focus {
+                    @include styleText($fs-2, $color-black-0, $fw-normal);
+                }
+            }
+            
+        }
+        
+    }
+}
+
+@include responsive('large') {
+    .eduCarousel {
+        height: 400px;
+    }
+}
+
+@include responsive('medium') {
+    .eduCarousel {
+        height: 300px;
+        .eduCarousel__content {
+            width: 70%;
+            h2 {
+                @include styleText($fs-3 + 2, $color-white-0, $fw-bold);
+            }
+            p {
+                @include styleText($fs-1 + 2, $color-white-cream, $fw-normal);
+            }
+            @include location(50%, 30%, -50%, -40%);
+        }
+    }
+}

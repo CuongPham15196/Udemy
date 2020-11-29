@@ -1,0 +1,82 @@
+.courses {
+    .courses__left {
+        margin: 40px 0;
+        height: 400px;
+        .courses__text {
+        width: 90%;
+        padding: 0 20px;
+        @include location(50%, 50%, -50%, -50%);
+        h4 {
+            @include styleText($fs-2, $color-black-0, $fw-bold);
+        }
+        p {
+            @include styleText($fs-1 + 2, $color-black-0, $fw-normal);
+        }
+    
+        }
+    }
+    .courses__right {
+        margin: 40px 0;
+        .nav-item {
+                .nav-link {
+                    @include styleText($fs-0, $color-black-0, $fw-normal);
+                    padding: 10px 5px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        display: block;
+                        left: 0;
+                        bottom: -1px;
+                        width: 0%;
+                        height: 4px;
+                        background-color: $color-blue;
+                        transition: all 0.5s;
+                        
+                    }
+                    &:focus::after {
+                        width: 100%;
+                    }
+                    &.active::after {
+                        width: 100%;
+                    }
+                }
+            }
+        .tab-content {
+            margin-top: $mg-2;
+            position: relative;
+            .card-title {
+                @include styleText($fs-0, $color-black-0, $fw-bold);
+            }
+            .card-text {
+                @include styleText($fs-1, $color-gray-4, $fw-normal);
+            }
+            .courses__rating {
+                display: flex;
+                .courses__star {
+                    @include styleText($fs-1, $color-yellow, $fw-normal);
+                    margin-right: $mg-0 + 2;
+                }
+                span:nth-child(2) {
+                    @include styleText($fs-1, $color-gray-4, $fw-bold);
+                    margin-right: $mg-0 + 2;
+                }
+                span:last-child {
+                    @include styleText($fs-1, $color-gray-4, $fw-normal);
+                }
+            }
+            .courses__price {
+                text-align: right;
+                margin-top: $mg-1;
+                .old__price {
+                    @include styleText($fs-1, $color-gray-4, $fw-normal);
+                    text-decoration: line-through;
+                }
+                .new__price {
+                    @include styleText($fs-0, $color-black-0, $fw-bold);
+                }
+            }
+        }
+        
+    }
+}

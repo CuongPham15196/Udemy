@@ -1,0 +1,24 @@
+.companies {
+    .companies__content {
+        text-align: center;
+        padding: $pd-2 0;
+        p {
+            @include styleText($fs-1, $color-gray-4, $fw-normal);
+        }
+        .companies__item {
+            margin: $mg-2 0;
+            a {
+                text-decoration: none;
+            }
+            .companies__text {
+                padding: $pd-2;
+                h3 {
+                    @include styleText($fs-2, $color-black-light, $fw-bold);
+                }
+                p {
+                    @include styleText($fs-0 + 1, $color-gray-4, $fw-normal);
+                }
+            }
+        }
+    }
+}

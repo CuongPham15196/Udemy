@@ -1,0 +1,14 @@
+.services__content {
+    .services__item {
+        margin: $mg-2 $mg-0;
+        padding: $pd-2 + 5;
+        height: 180px;
+        background-color: $color-white-0;
+        h4 {
+            @include styleText($fs-2 - 1, $color-black-0, $fw-bold);
+        }
+        p {
+            @include styleText($fs-0 + 1, $color-gray-4, $fw-normal);
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.footer__content {
+    margin: $mg-2 0;
+    .footer__item {
+        padding: $pd-2;
+        .footer__left {
+            .footer__text {
+                a {
+                    @include styleText($fs-1, $color-blue, $fw-normal);
+                    transition: all 0.5s;
+                    &:hover {
+                        color: $color-black-0;
+                    }
+                }
+            }
+        }
+        .footer__right {
+            text-align: right;
+            @include styleText($fs-1, #8a92a3, $fw-normal);
+            select {
+                &:hover {
+                    cursor: pointer;
+                }
+                &:focus {
+                    color: #29303b;
+                    background-color: #f7f8fa;
+                    border-color: #29303b;
+                    outline: none;
+                }
+                option {
+                    &:hover {
+                        background-color: $color-gray-2!important;
+                        cursor: pointer!important;
+                    }
+                }
+            }
+        }
+        .footer__part {
+            img {
+                width: 110px;
+            }
+            span {
+                margin-left: 20px;
+                letter-spacing: 0.1rem;
+                @include styleText($fs-1, $color-gray-4, $fw-normal);
+            }
+            a {
+                @include styleText($fs-1, $color-blue, $fw-normal);
+                transition: all 0.5s;
+                &:hover {
+                    color: $color-black-0;
+                }
+            }
+        }
+    }
+}
+
+.footer__line {
+    @include line(#ec5252, 100%, 6px);
+}
+
+@include responsive("medium") {
+    .footer__content {
+        .footer__item {
+            .footer__right {
+                text-align: left;
+            }
+        }
+    }
+        
+}

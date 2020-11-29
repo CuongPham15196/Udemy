@@ -1,0 +1,91 @@
+.topCategories {
+    .topCategories__content {
+        margin: $mg-2;
+        h3 {
+            @include styleText($fs-3, $color-black-0, $fw-bold);
+        }
+        .topCategories__item {
+            margin: $mg-1;
+            .topCategories__shadow {
+                margin: $mg-0 0;
+                height: 80px;
+                .topCategories__card {
+                    height: 80px;
+                    padding: $pd-1 $pd-2;
+                    @include styleText($fs-3, $color-gray-4, $fw-normal);
+                    span {
+                        
+                        margin-left: $mg-1;
+                        @include styleText($fs-0, $color-black-0, $fw-normal);
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 15px;
+                        top: 0;
+                        width: 89%;
+                        height: 100%;
+                        border-radius: $border-radius;
+                        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+                        opacity: 1;
+                        transition: all .2s ;
+                    }
+                }
+                &:hover .topCategories__card{
+                    box-shadow: 0 0 8px 8px rgba(20,23,28,.1);
+                }
+            }
+        }
+    }
+}
+
+@include responsive('extra-large') {
+    .topCategories {
+        .topCategories__content {
+            .topCategories__item {
+                .topCategories__shadow {
+                    &:hover .topCategories__card{
+                        width: 102%;
+                        box-shadow: 0 0 8px 8px rgba(20,23,28,.1);
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+
+@include responsive('medium') {
+    .topCategories {
+        .topCategories__content {
+            .topCategories__item {
+                .topCategories__shadow {
+                    &:hover .topCategories__card{
+                        width: 100%;
+                        box-shadow: 0 0 8px 8px rgba(20,23,28,.1);
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}
+
+@include responsive('small') {
+    .topCategories {
+        .topCategories__content {
+            .topCategories__item {
+                .topCategories__shadow {
+                    &:hover .topCategories__card{
+                        width: 95%;
+                        box-shadow: 0 0 8px 8px rgba(20,23,28,.1);
+                    }
+                }
+                
+            }
+            
+        }
+    }
+}

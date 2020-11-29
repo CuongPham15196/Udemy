@@ -1,0 +1,34 @@
+.banner {
+    height: 300px;
+    .banner__line {
+        @include line(linear-gradient(-45deg,#EC5252 0%,#6E1A52 100%), 100%, 10px);
+    }
+    .banner__item {
+        margin: $mg-2 + 1;
+        text-align: center;
+        
+        &.banner__text {
+            align-items: center;
+            transform: translateX(5%);
+            h3 {
+                @include styleText($fs-3, $color-white-0, $fw-bold);
+            }
+            p {
+                @include styleText($fs-0, $color-white-0, $fw-normal);
+            }
+        }
+        i {
+            font-size: $fs-3;
+        }
+    }
+}
+
+@include responsive('large') {
+    .banner {
+        .banner__item {
+            &.banner__text {
+                transform: translateY(50%);
+            }
+        }
+    }
+}
